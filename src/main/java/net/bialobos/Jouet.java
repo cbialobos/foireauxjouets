@@ -10,41 +10,41 @@ public class Jouet {
     @GeneratedValue
     private Long id;
 
-    private String firstName;
+    private String label;
 
-    private String lastName;
+    private Double price;
 
     protected Jouet() {
     }
 
-    public Jouet(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Jouet(String label, Double price) {
+        this.label = label;
+        this.price = price;
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getLabel() {
+        return label;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setlabel(String label) {
+        this.label = label;
     }
 
-    public String getLastName() {
-        return lastName;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
-        return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id,
-                firstName, lastName);
+        return String.format("Jouet[id=%d, Label='%s', Price='%d']", id,
+                label, price);
     }
 }
